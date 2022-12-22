@@ -1,0 +1,7 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+// here I can overwrite bootstrap classes and create my own
+
+.navbar-brand {
+    font-size: 3rem;
+}
