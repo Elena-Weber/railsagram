@@ -7,10 +7,10 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body d-flex">
-          <div class="border-end border-secondary mx-2" style="width: 60%">
-            <%= form.file_field :images, multiple: true %>
+          <div class="border-end border-secondary mx-2 pe-4" style="width: 60%">
+            <%= form.file_field :images, multiple: true, id: "post-images" %>
           </div>
-          <div style="width: 40%">
+          <div class="ms-2" style="width: 40%">
             <% if post.errors.any? %>
               <div style="color: red">
                 <h2><%= pluralize(post.errors.count, "error") %>This error prevented the post from being saved:</h2>
