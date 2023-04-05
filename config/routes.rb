@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :comments, only: [:create, :destroy]
+  resources :users, only: [:show]
 
   devise_for :users
 
