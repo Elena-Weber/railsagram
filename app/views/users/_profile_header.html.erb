@@ -6,11 +6,13 @@
       <button class="btn border border-1">Message</button>
       <button class="btn btn-primary">Follow</button>
     </div>
+
     <div class="d-flex gap-5">
       <small class="fw-bold"><%= pluralize(user.posts.count, "Post") %></small>
       <small class="fw-bold"><%= pluralize(100, "Follower") %></small>
       <small class="fw-bold"><%= pluralize(100, "Following") %></small>
     </div>
+
     <div class="d-flex flex-column">
       <small class="fw-bold"><%= user.full_name%></small>
       <small><%= user.bio%></small>
