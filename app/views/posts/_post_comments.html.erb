@@ -6,7 +6,7 @@
   <% end %>
   <% post.comments.last(3).each do |comment| %>
     <p class="card-text m-0">
-      <%= link_to comment.user, class: "a-decoration-none" do %>
+      <%= link_to comment.user, class: "a-decoration-none", data: { turbo: 'false' } do %>
         <span class="fw-bold">
           <%= comment.user.username %>
         </span>
