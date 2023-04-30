@@ -4,10 +4,12 @@
     <div class="d-flex gap-3 align-items-center">
       <p class="m-0 fw-bold"><%= user.username%></p>
       <button class="btn border border-1">Message</button>
-      <% unless user == current_user %>
-        <button class="btn btn-primary"> Follow </button>
+
+      <%= render 'layouts/shared/follow_state', user: user %>
+      
+      <% if user == current_user %>
+        <%= link_to 'Edit Profile', edit_user_registration_path, class: "btn btn-transparent border"%>
       <% end %>
-      <%= link_to 'Edit Profile', edit_user_registration_path, class: "btn btn-transparent border"%>
     </div>
 
     <div class="d-flex gap-5">
